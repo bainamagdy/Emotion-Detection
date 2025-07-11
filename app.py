@@ -12,7 +12,7 @@ import tempfile
 def analyzeEmation(img_vid):
     try:
        analyze =  DeepFace.analyze(img_vid, actions=["emotion"],enforce_detection=False)
-       return analyze[0]['emation']
+       return analyze[0]['emotion']
     except ValueError  as e:
         st.error("Error in analyzing the image or video. Please check the input format.")
         return None
